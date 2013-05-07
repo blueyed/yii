@@ -259,7 +259,7 @@ abstract class CValidator extends CComponent
 	 */
 	protected function addError($object,$attribute,$message,$params=array())
 	{
-		$params['{attribute}']=$object->getAttributeLabel($attribute);
+		$params['{attribute}']='„'.$object->getAttributeLabel($attribute).'“';
 		$object->addError($attribute,strtr($message,$params));
 	}
 
